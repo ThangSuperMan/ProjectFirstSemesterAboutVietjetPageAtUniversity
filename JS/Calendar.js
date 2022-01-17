@@ -151,7 +151,7 @@ previousBtn.addEventListener("click", () => {
     if (currentMonth.value === new Date().getMonth() && currentYear.value <= new Date().getFullYear()) {
         console.log("Not generate the canlendar")
         return;
-    } else if (currentMonth.value > new Date().getMonth() && currentYear.value >= new Date().getFullYear()) {
+    } else if (currentMonth.value > new Date().getMonth() && currentYear.value >= new Date().getFullYear() || currentYear.value >= new Date().getFullYear()  ) {
         
         console.log("month user > current month")
 

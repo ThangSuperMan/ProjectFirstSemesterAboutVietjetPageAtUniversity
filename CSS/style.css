@@ -50,7 +50,7 @@ main {
 /* Header*/
 .header {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgb(0 0 0 / 14%);
     opacity: .9;
     width: 100%;
     padding: 2rem 4rem;
