@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'KoHo', sans-serif;
+}
+
+.placesto-vietnam {
+    position: relative;
+    top: 100rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    padding-top: 30px;
+    height: auto;
+    width: 90%;
+}
+
+/* Text animation */
+.destinate-vietnam {
+    padding: 2rem 3rem;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.destinate-vietnam > div:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.destinate-vietnam > div:nth-child(1) span {
+    display: inline-block;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding-left: 5px;  
+    will-change: transform; 
+    transition: all .3s ease-in-out;
+    transform-style: preserve-3d;
+    transform-origin: top;
+    transform: translate3d(0, 0%, 0) rotateX(0deg);
+    transition-delay: calc(0.05s * var(--index));
+}
+
+.destinate-vietnam > div:nth-child(1):hover span {
+    transform: translate3d(0, 0%, 0) rotateX(90deg);
+}
+
+/* Hover first child and it have effect for the last child */
+.destinate-vietnam > div:nth-child(1):hover + div:nth-child(2) span {
+    transform: translate3d(0, 0%, 0) rotateX(0deg);
+}
+
+/* Clone div text animation */
+.destinate-vietnam > div:nth-child(2) span {
+    display: inline-block;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding-left: 5px;
+    position: relative;
+    will-change: transform; 
+    transition: all .3s ease-in-out;
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+    transform: translate3d(0, 0%, 0) rotateX(-90deg);
+    transition-delay: calc(0.05s * var(--index));
+}
+
+
+.places-container {
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+}
+
+.places-item {
+    background-color: tomato;
+    position: relative;
+    transition: all .3s ease;
+}
+
+.places-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 46, 46, 0.194);
+}
+
+.places-item .line-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9px;
+    background-color: var(--secondary-color);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.places-item:hover .line-top {
+    opacity: 1;
+}
+
+.places-item .places-item__wrapper {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    transition: all .3s ease;
+}
+
+.places-item:hover .places-item__wrapper {
+    transform: translateY(-50%);
+}
+
+.places-item__wrapper .wrapper__title {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.places-item__wrapper .wrapper__title,
+.places-item__wrapper .wrapper__button {
+    cursor: pointer;
+}
+
+.places-item__wrapper .wrapper__title span {
+    display: block;
+}
+
+.places-item__wrapper .wrapper__button {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    padding: 8px 30px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+
+.places-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.places-item:first-child {
+    grid-row: 1/3;
+}
+
+.places-item:nth-child(2) {
+    grid-row: 1/3;
+}
+
+
+
+
+

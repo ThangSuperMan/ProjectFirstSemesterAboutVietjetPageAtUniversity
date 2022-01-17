@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #D34334;
+    --secondary-color: #FDC70B;
+    --color-text-calendar: #A0AAAE;
+    --shadow: rgba(0,0,0,0.1);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'KoHo', sans-serif;
+
+}
+
+.calendar {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    padding: 1.5rem 2rem;
+    margin: 0 auto;
+    background-color: white;
+    width: max-content;
+    height: max-content;
+    box-shadow: 0 5px 5px var(--shadow);
+}
+
+.calendar i {
+    top: .5rem;
+    right: .5rem;
+    color: var(--primary-color);
+    font-size: 3rem;
+    cursor: pointer; 
+}
+
+.calendar.active {
+    display: block;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+.month-picker {
+    font-size: 1.8rem;
+    margin-right: .5rem;
+}
+
+.month-picker span:first-child {
+    font-size: 1.3rem;
+}
+
+.month-picker span:last-child {
+    font-size: 1.8rem;
+}  
+
+.calendar-header .year-picker {
+    display: flex;
+    /* align-items: center; */
+}
+
+.calendar-header .year-picker {
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+}
+
+.change i {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+}
+
+.days-of-week span {
+    display: inline-block;
+    padding: .5rem;
+    font-size: 1.3rem;
+    color: var(--color-text-calendar);
+}
+
+.days-of-week span:first-child {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.days-of-month {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.days-of-month div {
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+
+}
+
+.days-of-month div.current-date {
+    color: white;
+    background-color: var(--primary-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.days-of-month .cannot-choose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 1rem);
+    height: 100%;
+    background-color: #eeeeee;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+.change i {
+    font-size: 1.5rem;
+}
+
+/* Rotate arrow change month and year  */
+
+.change:first-child i {
+    transform: rotate(-90deg);
+}
+
+.change:last-child i {
+    transform: rotate(90deg);
+}
+
+/* Animation when the user hover a dates of month */
+.days-of-month div {
+    position: relative;
+}
+
+/* PICK DAY FLY */
+.days-of-month div.pick-day {
+    color: white;
+    background-color: var(--primary-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.days-of-month span {
+    position: absolute;
+    transition: all .3s ease-in-out;
+}
+
+.days-of-month span:nth-child(1),
+.days-of-month span:nth-child(3) {
+    background-color: var(--primary-color);
+}
+
+.days-of-month span:nth-child(1) {
+    height: 0;
+    width: 2px;
+    left: 0;
+    bottom: 0;
+}
+
+.days-of-month span:nth-child(3) {
+    height: 0;
+    width: 2px;
+    right: 0;
+    top: 0;
+}
+
+.days-of-month div:hover span:nth-child(1),
+.days-of-month div:hover span:nth-child(3) {
+    height: 100%;
+}
+
+.days-of-month span:nth-child(2),
+.days-of-month span:nth-child(4) {
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.days-of-month span:nth-child(2) {
+    top: 0;
+    left: 0;
+}
+
+.days-of-month span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+}
+
+.days-of-month div:hover span:nth-child(2),
+.days-of-month div:hover span:nth-child(4) {
+    width: 100%;
+}
+
+.days-of-month div:hover span:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.days-of-month div:hover span:nth-child(3) {
+    transition-delay: .4s;
+}
+
+.days-of-month div:hover span:nth-child(4) {
+    transition-delay: .6s;
+}

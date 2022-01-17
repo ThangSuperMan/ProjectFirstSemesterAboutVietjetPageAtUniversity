@@ -1,0 +1,223 @@
+:root {
+    --primary-color: #D34334;
+    --secondary-color: #FDC70B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'KoHo', sans-serif;
+}
+
+/* Buttons */
+.btn-secondary {
+    color: #000 !important;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background: linear-gradient(26.73deg, #F9A51A 13.7%, #FBB612 29.8%, #FFDD00 66.81%);
+}
+
+.btn-primary {
+    color: #fff !important;
+    padding: .5rem 1rem;
+    background: linear-gradient(49.67deg, #054B8B 0%, #128BFB 42.33%, #055FB3 64.64%);
+}
+
+main {
+    width: 100%;
+    position: fixed;
+}
+
+.container {
+    /* Tell will browser optimize the animation for this element */
+    will-change: transform;
+    position: absolute;
+    width: 100%;
+    height: 5300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Header*/
+.header {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: .9;
+    width: 100%;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.header .logo img {
+    width: 100%;
+    height: 4.5rem;
+    object-fit: cover;
+}
+
+.header .header-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header-user .header-user-item,
+.header-declare .header-declare-item {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-shadow: 3px 3px 5px rgb(0 0 0 / 42%);
+}
+
+
+.header-user {
+    margin-bottom: 1.5rem;
+    display: flex;
+}
+
+.header-user-register {
+    display: flex;
+    align-items: center;
+}
+
+.header-user-register i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.signup-and-login {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+
+.signup-and-login i {
+    position: relative;
+    display: inline-block;
+    font-size: 2.2rem;
+}
+
+.signup-and-login i:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.signup-inner, 
+.login-inner {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.4rem;
+    margin-left: .8rem;
+}
+
+.header-declare .header-declare-item {
+    margin-right: 1.5rem;
+}
+
+.header-user-item:not(:last-child){
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+
+/* Slider */
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 95vh;
+    z-index: 1;
+}
+
+.slider-item {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-item .slider-item-image {
+    /* Setting the first image default for the slider */
+    background-image: url('../images/slider1.jpeg');
+    background-repeat: no-repeat;
+    transition: all .3s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+/* Top background */
+.top-background {
+    top: 60rem;
+    z-index: 100;
+    position: absolute;
+}
+
+.top-background-bubble {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    padding: 20rem;
+    justify-content: center;
+    transform: translateY(-21%);
+}
+
+.bubble-item:not(last-child) {
+    margin-right: 2.5rem;
+}
+
+.bubble-item {
+    position: relative;
+    width: 25%;
+}
+
+.bubble-item {
+    width: 17rem;
+    height: 17rem;
+}
+
+.bubble-item .bubble-item-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.bubble-item .bubble-inner {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #013789;
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.bubble-inner {
+    width: 80%;
+    text-align: center;
+}
+
+.top-background-image img {
+    width: 100%;
+    height: 70rem;
+    object-fit: cover;
+}
+
+

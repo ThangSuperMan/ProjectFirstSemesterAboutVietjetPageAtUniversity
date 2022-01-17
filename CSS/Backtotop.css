@@ -1,0 +1,25 @@
+.backToTop {
+    position: fixed;
+    z-index: 10000;
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: rgb(236, 157, 11);
+    bottom: 80rem;
+    right: 0.7rem;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+}
+
+.backToTop.active {
+    bottom: 3rem;
+    opacity: 0.9;
+    visibility: visible;
+}
+
+.backToTop i {
+    color: white;
+    font-size: 2.2rem;
+}

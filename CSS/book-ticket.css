@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+:root {
+    --primary-color: #388FB1;
+    --secondary-color: #F8BD53;
+    --third-color: #D9332E;
+}
+
+body {
+    font-family: 'KoHo', sans-serif;
+}
+
+.book-ticket {
+    position: relative;
+    z-index: 100;
+    margin: 0 auto;
+    top: 15rem;
+    left: 45rem;
+    width: 38rem;
+    height: auto;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.book-ticket__service {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-ticket__service .service__food {
+    width: 60%;
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border-top-left-radius: 10px;
+}
+
+.book-ticket__service .service__send-package {
+    width: 40%;
+    border-top-right-radius: 10px;
+    color: white;
+    padding: 2rem;
+    font-size: 1.35rem;
+}
+
+.book-ticket__content {
+    border-top: 1px solid #34677b;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.book-ticket__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.book-ticket__top span {
+    color: white;
+    font-size: 1.7rem;
+}
+
+.top__price {
+    display: flex;
+    align-items: center;
+    cursor: no-drop;
+}
+
+.top__price span {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: .8rem;
+}
+
+.top__price i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.middle__point-start {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: .5rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.point-start__left i {
+    font-size: 1.7rem;
+    margin-right: 1rem;
+}
+
+.point-start__left span {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.point-start__right {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    border-left: 1px solid #D1D3D4;
+}
+
+.point-start__right span:last-child {
+    font-size: 1.5rem;
+}
+
+.point-start__right span:first-child {
+    font-size: 1.1rem;
+    padding-bottom: 0.2rem;
+}
+
+.middle__point-end {
+    background-color: white;
+    padding: 1.34rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.middle__point-end i {
+    font-size: 1.7rem;
+    margin-right: 1rem;
+    transform: rotate(180deg);
+}
+
+.middle__point-end span {
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+.middle__client {
+    background-color: white;
+    padding: .5rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.middle__client i {
+    font-size: 1.7rem;
+    margin-right: 1.5rem;
+}
+
+.middle__client-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle__client .client__title {
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+.middle__client .client__choose-flyer {
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+.middle__sale-ticket {
+    background-color: white;
+    padding: 1.34rem 1.5rem;
+    border-radius: 10px;
+}
+
+.middle__sale-ticket i {
+    font-size: 1.7rem;
+    margin-right: 1rem;
+}
+
+.middle__sale-ticket span {
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+/* TÌM VÉ RẺ NHẤT */
+
+.book-ticket__bottom {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.bottom__checkbox {
+    position: relative;
+    padding: 1rem 2rem;
+}
+
+
+.bottom__checkbox i {   
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: .8rem;
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+}
+
+.bottom__checkbox span {
+    font-size: 1.65rem;
+    color: white;
+}
+
+.bottom__checkbox div {
+    position: absolute;
+    top: 1.3rem;
+    left: 1.89rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 1.5px solid white;
+}
+
+/* BUTTON FIND FLY */
+.button {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.button__find-fly {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+/* DIỂM KHỞI HÀNH */
+.place-start {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: auto;
+    background-color: white;
+    z-index: 999;
+}
+
+.place-start.active {
+    display: block;
+}
+
+.place-start div {
+    /* font-weight: 300; */
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #eee;
+    color: rgb(58, 38, 38);
+    font-size: 1.7rem;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.place-start div:hover {
+    text-decoration: underline;
+}
+
+.place-start i {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    color: var(--primary-color);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+/* ĐIỂM KẾT THÚC */
+.place-end {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: auto;
+    background-color: white;
+    z-index: 999;
+}
+
+.place-end.active {
+    display: block;
+}
+
+.place-end div {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #eee;
+    color: rgb(58, 38, 38);
+    font-size: 1.7rem;
+    font-weight: 400;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.place-end div:hover {
+    text-decoration: underline;
+}
+
+.place-end i {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    color: var(--primary-color);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+/* number of clients */
+.client-fly {
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    padding: 1rem 2rem;
+    background-color: #fff;
+}
+
+.client-fly.active {
+    display: block;
+}
+
+.client-fly .exit-icon {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    cursor: pointer;
+
+}
+
+.client-fly .client__support {
+    padding-left: 13rem;
+    margin-bottom: 2rem;
+}
+
+.client-fly .client__support a {
+    color: #208AEC;
+    font-size: 1.7rem;
+    margin-right: 1rem;
+}
+
+.client-fly .client__support i {
+    color: #208AEC;
+    font-size: 1.3rem;
+}
+
+.client-fly__adult {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.adult__wrapper {
+    display: flex;
+    align-items: center;
+    width: 65%;
+}
+
+.adult__number {
+    width: 35%;
+}
+
+.adult__wrapper i{
+    font-size: 4.5rem;
+    color: #939598;
+    margin-right: 1.5rem;
+}
+
+.wrapper__content span {
+    display: block;
+}
+
+.wrapper__content span:first-child {
+    font-size: 1.7rem;
+    color: black;
+}
+
+.wrapper__content span:last-child {
+    font-size: 1.3rem;
+    color: #939598;
+}
+
+.adult__number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.adult__number button {
+    width: 30%;
+    position: relative;
+}
+
+.adult__number button {
+    border: none;
+    border: 1px solid #939598;
+    opacity: .7;
+    background-color: #fff;
+    width: 3.2rem;
+    height: 3.2rem;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all .5s linear;
+}
+
+
+.adult__number button:active {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    background-color: #939598;
+}
+
+
+
+.adult__number button:before {
+    content: '';
+    position: absolute;
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.adult__number span {
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: var(--third-color);
+}
+
+.adult__wrapper .children-icon {
+    font-size: 3.4rem ;
+}
+
+.adult__wrapper .baby-icon {
+    font-size: 3.4rem;
+}
+
+

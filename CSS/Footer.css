@@ -1,0 +1,153 @@
+.footer {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 410rem;
+    transform: translateX(-50%);
+}
+
+.footer-flytofuture {
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+.footer-flytofuture img {
+    display: block;
+    margin: 0 auto;
+    width: 28rem;
+}
+
+.footer-go-out-on-a-limp {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 4.5rem;
+    /* 
+        40 * 4 = 160
+        160 / 5 = 32px
+    */
+}
+
+.footer-go-out-on-a-limp-item {
+    width: calc(20% - 32px);
+}
+
+.go-out-on-a-limp-item .limp-item-desc {
+    display: block;
+    text-align: center;
+    color: #e03e2d;
+    font-size: 4rem;
+    font-weight: bolder;
+    margin-bottom: .8rem;
+}
+
+.go-out-on-a-limp-item .limp-item-detail span {
+    font-size: 1.8rem;
+    display: block;
+    text-align: center;
+}
+
+.flygreen {
+    width: 100%;
+    margin-bottom: 10rem;
+}
+
+.flygreen-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.medal {
+    width: 100%;
+    margin-bottom: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    /* 
+        55 * 5 = 275px
+        275 / 6 = 45.83px
+    */
+}
+
+.medal-item {
+    width: calc(calc(100% / 6) - 45.83px);
+}
+
+.medal-item-title span {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.medal-item-img {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.medal-item-img img {
+    object-fit: cover;
+}
+
+.footer-service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* 
+        30 * 4 = 120
+        120 / 5 = 24px
+    */
+}
+
+.footer-service-item {
+    width: calc(calc(100% / 5) - 24px);
+}
+
+.footer-service-item-title {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-service-item-title img {
+    width: 2rem;
+    margin-right: .5rem;
+    transform: translateY(.3rem);
+}
+
+.footer-service-item-title span{
+    font-size: 2rem;
+    letter-spacing: .5px;
+}
+
+.footer-service-item-content ul {
+    padding-left: 2.7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-service-item-content ul li {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: .8rem;
+}
+
+.footer-service-item-content ul li a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #000;
+    transition: all .3s ease-in-out;
+}
+
+.footer-service-item-content ul li a:hover {
+    color: #e03e2d;
+}
+
+
+
+
+
+
